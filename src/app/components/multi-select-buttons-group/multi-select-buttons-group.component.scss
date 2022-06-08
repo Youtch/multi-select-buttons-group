@@ -1,0 +1,116 @@
+.btn{
+    width:30%;// To render 3 buttons in the container element (3*30 = 90% => soit 100% - margins)
+    
+    // height and aspect-ratio define the button's square shape
+    height:auto;
+    aspect-ratio:1;
+
+    --border-radius: var(--msbg-border-radius);
+    margin-bottom: 5px;
+
+    --border-color: var(--msbg-border-color);
+    --border-size: var(--msbg-border-size);
+    --border-style: var(--msbg-border-style);
+
+    & ion-icon{
+        padding-bottom: 10%;
+    }
+    & img{
+        width: 70%;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    & ion-label{
+        white-space: break-spaces;//To do a line break
+    }
+}
+
+
+.btn-checked{
+    --background: var(--msbg-background-color-checked);
+    
+    & ion-icon{
+        color: var(--msbg-foreground-color-checked);
+    }
+    & ion-label{
+        color: var(--msbg-foreground-color-checked);
+    }
+}
+
+.btn-unchecked{
+    --background: var(--msbg-background-color-unchecked) !important;
+    
+    & ion-icon{
+        color: var(--msbg-foreground-color-unchecked);
+    }
+    & ion-label{
+        color: var(--msbg-foreground-color-unchecked) !important;
+    }
+
+    ////////////////////// Pour changer dynamiquement  d'une image rasteurisée (NB : filter requiert plus de performance) ///////////////////
+    // Obtenu sur ce convertisseur hexa => filter : https://codepen.io/sosuke/pen/Pjoqqp
+    /*& img{
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }*/
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// Responsive display related to screens sizes ////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// To size the icons
+
+/////eXtra eXtra Small : smartphone
+@media only screen and (max-width: 420px) {
+    .btn{
+        & ion-icon{
+            font-size: 25px;
+        }
+    }
+}
+
+/////eXtra Small : smartphone
+@media only screen and (min-width: 420px) {
+    .btn{
+        & ion-icon{
+            font-size: 40px;
+        }
+    }
+}
+
+//Small : smartphone (port & land) & tablet port
+@media only screen and (min-width: 600px){
+    .btn{
+        & ion-icon{
+            font-size: 55px;
+        } 
+    }
+}
+
+//Medium : smartphone (land) & tablette (port & land)
+@media only screen and (min-width: 768px) {
+    .btn{
+        & ion-icon{
+            font-size: 70px;
+        } 
+    }
+}
+
+//Medium : smartphone (land) & tablet (port & land)
+@media only screen and (min-width: 768px) {
+    .btn{
+        & ion-icon{
+            font-size: 70px;
+        } 
+    }
+}
+
+//Large : tablette (land), laptop/desktop (port)
+@media only screen and (min-width: 992px){
+    .btn{
+        & ion-icon{
+            font-size: 90px;
+        } 
+    }
+}

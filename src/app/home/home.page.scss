@@ -1,0 +1,14 @@
+.ms-btns-grp-scroll-x-wrapper{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    flex-wrap: wrap;    
+    height: 100%;
+    width: 100%;
+
+    .ms-btns-grp-scroll-x-scroller {
+      display: inline-block;  
+      width: max-content !important; 
+
+    }
+}

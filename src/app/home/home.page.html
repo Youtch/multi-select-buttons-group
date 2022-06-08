@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    
+    <ion-title>Buttons group : wrap is activated</ion-title>
+    <multi-select-buttons-group 
+        [buttonsData]="aButtonsGroupMock1" 
+        [buttonWidth]="'23%'" 
+        [buttonBorderRadius]="'10px'"
+        
+        [buttonBackgroundColorChecked]="'#fff'" [buttonForegroundColorChecked]="'#f00'"
+        [buttonBackgroundColorUnchecked]="'#f00'" [buttonForegroundColorUnchecked]="'#fff'"
+
+        [buttonBorderColor]="'red'" [buttonBorderSize]="'3px'" [buttonBorderStyle]="'dashed'"
+        
+        style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    </multi-select-buttons-group>
+
+    <ion-title>Buttons group : scroller is activated</ion-title>
+    <div class="ms-btns-grp-scroll-x-wrapper">
+      <multi-select-buttons-group 
+            class="ms-btns-grp-scroll-x-scroller" 
+            [buttonsData]="aButtonsGroupMock2"
+            [buttonWidth]="'23vw'"
+            style="display: flex">
+      </multi-select-buttons-group>
+    </div>
+
+  </ion-card>
+</ion-content>

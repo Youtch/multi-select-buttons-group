@@ -1,0 +1,46 @@
+<ion-button #button *ngFor="let button of buttonsData" [id]="button.id" 
+    class="btn" [ngClass]="button.checked ? 'btn-checked' : 'btn-unchecked'"
+    
+    [style.width]="buttonWidth==undefinded? '' : buttonWidth"
+    [style.height]= "buttonHeight==undefinded? '' : buttonHeight" 
+    [style.--border-radius]="buttonBorderRadius==undefinded? '' : buttonBorderRadius"
+
+    [style.--background]="button.checked ? (buttonBackgroundColorChecked==undefinded? '' : buttonBackgroundColorChecked) : (buttonBackgroundColorUnchecked==undefinded? '' : buttonBackgroundColorUnchecked+' !important')"
+    
+    [style.--border-color]="buttonBorderColor==undefinded? '' : buttonBorderColor"
+    [style.--border-size]="buttonBorderSize==undefinded? '' : buttonBorderSize"
+    [style.--border-style]="buttonBorderStyle==undefinded? '' : buttonBorderStyle"
+
+    (click)="clickButton(button.id)"> 
+    <div>
+
+        <ion-icon 
+            *ngIf="button.iconName!=undefined && button.iconName!=''" 
+             [style.color]="button.checked? (buttonForegroundColorChecked==undefinded? '' : buttonForegroundColorChecked) : (buttonForegroundColorUnchecked==undefinded? '' : buttonForegroundColorUnchecked)"
+            [name]="button.iconName" (click)="clickButtonChildElements(button.id, $event)"
+        ></ion-icon>
+
+        <img *ngIf="button.imageUrl!=undefined && button.imageUrl!=''" 
+            [src]="button.imageUrl" (click)="clickButtonChildElements(button.id, $event)">
+
+        <!-- Adaptation du composant -->        
+        <ion-icon *ngIf="button.svgUrl!=undefined && button.svgUrl!=''" 
+            [src]="button.svgUrl" (click)="clickButtonChildElements(button.id, $event)"
+            [style.color]="button.checked? (buttonForegroundColorChecked==undefinded? '' : buttonForegroundColorChecked) : (buttonForegroundColorUnchecked==undefinded? '' : buttonForegroundColorUnchecked)"
+           >
+        </ion-icon><!-- source : https://stackoverflow.com/questions/58489636/how-to-change-the-color-of-custom-svg-icon-in-ionic-4 -->
+
+        <!-- Adaptation du composant -->
+        <fa-icon 
+            *ngIf="button.fontAwesomeIconName!=undefined && button.fontAwesomeIconName!=''" 
+            [style.color]="button.checked? (buttonForegroundColorChecked==undefinded? '' : buttonForegroundColorChecked) : (buttonForegroundColorUnchecked==undefinded? '' : buttonForegroundColorUnchecked)"
+            [icon]="button.fontAwesomeIconName"  (click)="clickButtonChildElements(button.id, $event)">
+        </fa-icon>
+
+        <div> 
+          <ion-label 
+            [style.color]="button.checked? (buttonForegroundColorChecked==undefinded? '' : buttonForegroundColorChecked) : (buttonForegroundColorUnchecked==undefinded? '' : buttonForegroundColorUnchecked)"
+            (click)="clickButtonChildElements(button.id, $event)">{{button.label}}</ion-label>
+        </div>
+    </div>
+</ion-button>
