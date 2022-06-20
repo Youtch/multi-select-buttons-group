@@ -13,7 +13,8 @@ When you offer an huge number of choices, it is preferable to distribute them in
 - the buttons are flowing in the page : filling horizontal and vertical space, depending on the width of the buttons (using of the css property flex-wrap)
 - the buttons are scrolling horizontally, they can overflow the screen using scrolling. (using the classes scroll-x-wrapper and scroll-x-scroller provided).
 ### Data interface of button
-```export class IButtonData{
+```
+export class IButtonData{
 	id: string ;  		// set the id attribute of the html element
 	iconName: string;	// set the name property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor svgUrl !
 	svgUrl: string; 	// set the src property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor iconName !
@@ -27,14 +28,14 @@ When you offer an huge number of choices, it is preferable to distribute them in
 
 ### Input attributes :
 #### 1) Data
-- CF “Description of data” topic
+- CF [Data interface of button](#data-interface-of-button)
 #### 2) Size
-- buttonWidth:*string* = largeur du bouton. Toutes les unité sont possibles. 
-L’utilisation de pourcentages et appliqué selon l’élément parent d’instance du composant.
-Le pourcentage permet en particulier de générer des boutons de forme carrée (ratio 1 :1) : pour cela définir buttonHeight="auto".
-- buttonHeight:*string* = hauteur du bouton. Toutes les unité sont possibles. 
-Par défaut : les boutons ont une forme carrée (ratio 1 :1)
-- buttonBorderRadius:*string* = rayon d’arrondi du bouton. Unité : px (par défaut : 25px)
+- buttonWidth:*string* = button’s width. All units are accepted.
+**Percentage** is applied in function of the parent element of the component instance.
+buttonHeight:*string* = button’s height. All units are accepted.
+**By default** : buttons are square (ratio 1 :1)
+- buttonBorderRadius:*string* = button’s border radius. Unit : px (by default : 25px)
+
  
 #### 3) Colors and borders
 - buttonForegroundColorChecked:*string = text and icon color of **checked** buttons 
@@ -48,20 +49,19 @@ NB : to not apply a border, set ‘buttonBorderColor = none’ (by default) and 
 
 #### 4)	About color priority order
 **Legend : 1 = maximum override (higher priority)**
-1) **Local using : HTML element’s property of a component instance **
+1. **Local using : HTML element’s property of a component instance**
 **Purpose** : to apply an individual theme to each instance.
 Component instance properties (buttonForegroundColorSelected, buttonForegroundColorUnchecked etc): 
-2) **Local using : page’s stylesheet**
+2. **Local using : page’s stylesheet**
 **Purpose** : To apply the same theme in a page.
 Edit the page's stylesheet by copying the classes you want to change from src/multi-select-buttons-group/multi-select-buttons-group.scss to your page's sheet. 
 
 3) **Global using : all the app**
-**Purpose** : to apply an identical theme to all instances of the application.
-Edit these style variables in themes/variables.scss :
---msbg-foreground-checked = text and icon color of **checked** buttons
---msbg-background-checked = background color of **checked** buttons 
---msbg-foreground-unchecked = text and icon color of **unchecked** buttons 
---msbg-background-unchecked = background color of **unchecked** buttons
---msbg-border-color = border stroke **color** of buttons
---msbg-border-size = border stroke **size** of buttons (unit : px)
---msbg-border-style = border stroke **style** of buttons (= ‘solid’, ‘dashed’, etc…)
+**Purpose** : to apply an identical theme to all instances of the application. Define theses variables in themes/variables.scss :
+- --msbg-foreground-checked = text and icon color of **checked** buttons
+- --msbg-background-checked = background color of **checked** buttons 
+- --msbg-foreground-unchecked = text and icon color of **unchecked** buttons 
+- --msbg-background-unchecked = background color of **unchecked** buttons
+- --msbg-border-color = border stroke **color** of buttons
+- --msbg-border-size = border stroke **size** of buttons (unit : px)
+- --msbg-border-style = border stroke **style** of buttons (= ‘solid’, ‘dashed’, etc…)
