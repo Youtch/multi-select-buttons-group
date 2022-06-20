@@ -116,12 +116,10 @@ export class MultiSelectButtonsGroupComponent implements AfterViewInit{ // OnIni
 }
 
 export class IButtonData{
-  id: string;
-
-  iconName: string;
-  svgUrl: string;
-  imageUrl: string;
-  
-  label: string;
-  checked: Boolean
+  id: string ;  // set the id attribute of the html element
+  iconName: string;// set the name property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor svgUrl !
+  svgUrl: string; // set the src property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor iconName !
+  imageUrl: string; // define the URL of an html <img> element. It cannot be used simultaneously with iconName nor svgUrl !
+  label: string; // the caption of the button positioned after the button pictogram
+  checked: boolean; //set button state on instance initialization
 }
