@@ -1,18 +1,18 @@
-#Multi-select-buttons-group
-##Abstract
+# Multi-select-buttons-group
+## Abstract
 This component is a multiple choice button group for Ionic, based on a custom component, which provides the user with the means to select one or more options through a button group. Each includes a wording surmounted by an icon. Icons can be taken from ionicons, or an SVG vector image file, or a raster image file.
-###Features
+### Features
 - Multi-select-buttons-group will replace the ion-select multi-select component when you want to display the options selection on the entire screen, without any modal opened. 
 Alternatively a horizontal scrolling can also be integrated as a wrapper of the component instance.
 - The data of an instance is contained in an array containing an object. The state toggling of a button will result to change this data (see the examples).
-###UX good practices
+### UX good practices
 When you offer an huge number of choices, it is preferable to distribute them inside several component instances: in order to maintain a visual clarity. Eventually you will consider going back to an ion-select component. 
 
-##Using
+## Using
 2 types of component wrapper are provided in the source code of examples :
 - the buttons are flowing in the page : filling horizontal and vertical space, depending on the width of the buttons (using of the css property flex-wrap)
 - the buttons are scrolling horizontally, they can overflow the screen using scrolling. (using the classes scroll-x-wrapper and scroll-x-scroller provided).
-###Data interface of button
+### Data interface of button
 ```export class IButtonData{
 	id: string ;  		// set the id attribute of the html element
 	iconName: string;	// set the name property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor svgUrl !
@@ -20,14 +20,15 @@ When you offer an huge number of choices, it is preferable to distribute them in
 	imageUrl: string; 	// define the URL of an html <img> element. It cannot be used simultaneously with iconName nor svgUrl !
 	label: string; 		// the caption of the button positioned after the button pictogram
 	checked: boolean; 	//set button state on instance initialization
-}```
+}
+```
 
-##Spécifications
+## Specifications
 
-###Input attributes :
-####1) Data
+### Input attributes :
+#### 1) Data
 - CF “Description of data” topic
-####2) Size
+#### 2) Size
 - buttonWidth:*string* = largeur du bouton. Toutes les unité sont possibles. 
 L’utilisation de pourcentages et appliqué selon l’élément parent d’instance du composant.
 Le pourcentage permet en particulier de générer des boutons de forme carrée (ratio 1 :1) : pour cela définir buttonHeight="auto".
@@ -35,7 +36,7 @@ Le pourcentage permet en particulier de générer des boutons de forme carrée (
 Par défaut : les boutons ont une forme carrée (ratio 1 :1)
 - buttonBorderRadius:*string* = rayon d’arrondi du bouton. Unité : px (par défaut : 25px)
  
-####3) Colors and borders
+#### 3) Colors and borders
 - buttonForegroundColorChecked:*string = text and icon color of **checked** buttons 
 - buttonBackgroundColorChecked :*string = background color of **checked** buttons
 - buttonForegroundColorUnchecked:*string = text and icon color of **unchecked** buttons
@@ -45,7 +46,7 @@ Par défaut : les boutons ont une forme carrée (ratio 1 :1)
 - buttonBorderStyle:*string = border stroke **style** (solid, dashed, etc…)
 NB : to not apply a border, set ‘buttonBorderColor = none’ (by default) and ‘buttonBorderStyle = none’ (by default)
 
-####4)	About color priority order
+#### 4)	About color priority order
 **Legend : 1 = maximum override (higher priority)**
 1) **Local using : HTML element’s property of a component instance **
 **Purpose** : to apply an individual theme to each instance.
