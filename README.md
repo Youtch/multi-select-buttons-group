@@ -44,19 +44,19 @@ buttonHeight:*string* = button’s height. All units are accepted.
 - buttonBackgroundColorUnchecked :*string = background color of **unchecked** buttons
 - buttonBorderColor:*string = border stroke **color** of buttons
 - buttonBorderSize:*string = border stroke **size** of buttons
-- buttonBorderStyle:*string = border stroke **style** (solid, dashed, etc…)
+- buttonBorderStyle:*string = border stroke **style** (solid, dashed, etc…)<BR>
 NB : to not apply a border, set ‘buttonBorderColor = none’ (by default) and ‘buttonBorderStyle = none’ (by default)
 
 #### 4)	About color priority order
 **Legend : 1 = maximum override (higher priority)**
-1. **Local using : HTML element’s property of a component instance**
-**Purpose** : to apply an individual theme to each instance.
+1. **Local using : HTML element’s property of a component instance**<BR>
+**Purpose** : to apply an individual theme to each instance.<BR>
 Component instance properties (buttonForegroundColorSelected, buttonForegroundColorUnchecked etc): 
-2. **Local using : page’s stylesheet**
-**Purpose** : To apply the same theme in a page.
+2. **Local using : page’s stylesheet**<BR>
+**Purpose** : To apply the same theme in a page.<BR>
 Edit the page's stylesheet by copying the classes you want to change from src/multi-select-buttons-group/multi-select-buttons-group.scss to your page's sheet. 
 
-3) **Global using : all the app**
+3) **Global using : all the app**<BR>
 **Purpose** : to apply an identical theme to all instances of the application. Define theses variables in themes/variables.scss :
 - --msbg-foreground-checked = text and icon color of **checked** buttons
 - --msbg-background-checked = background color of **checked** buttons 
