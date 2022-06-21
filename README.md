@@ -1,4 +1,5 @@
 # Multi-select-buttons-group
+
 ## Abstract
 This component is a multiple choice button group for Ionic, based on a custom component, which provides the user with the means to select one or more options through a button group. Each includes a wording surmounted by an icon. Icons can be taken from ionicons, or an SVG vector image file, or a raster image file.
 ### Features
@@ -7,13 +8,13 @@ Alternatively a horizontal scrolling can also be integrated as a wrapper of the 
 - The data of an instance is contained in an array containing an object. The state toggling of a button will result to change this data (see the examples).
 ### UX good practices
 When you offer an huge number of choices, it is preferable to distribute them inside several component instances: in order to maintain a visual clarity. Eventually you will consider going back to an ion-select component. 
-
+--------------------------------------------------------------------------------------------------------------------------
 ## Using
 2 types of component wrapper are provided in the source code of examples :
 - the buttons are flowing in the page : filling horizontal and vertical space, depending on the width of the buttons (using of the css property flex-wrap)
 - the buttons are scrolling horizontally, they can overflow the screen using scrolling. (using the classes scroll-x-wrapper and scroll-x-scroller provided).
 ### Data interface of button
-```
+```typescript
 export class IButtonData{
 	id: string ;  		// set the id attribute of the html element
 	iconName: string;	// set the name property of an <ion-icon> component. WARNING: It cannot be used simultaneously with imageUrl nor svgUrl !
@@ -23,7 +24,7 @@ export class IButtonData{
 	checked: boolean; 	//set button state on instance initialization
 }
 ```
-
+--------------------------------------------------------------------------------------------------------------------------
 ## Specifications
 
 ### Input attributes :
@@ -66,4 +67,5 @@ Define theses variables in themes/variables.scss :<BR>
 	- --msbg-border-size = border stroke **size** of buttons (unit : px)
 	- --msbg-border-style = border stroke **style** of buttons (= ‘solid’, ‘dashed’, etc…)
 	
+------------------------------------------------------------------------------------------------------------------------
 Use it as you like :man_cook: !
