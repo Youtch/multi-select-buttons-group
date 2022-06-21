@@ -12,8 +12,8 @@ When you offer an huge number of choices, it is preferable to distribute them in
 --------------------------------------------------------------------------------------------------------------------------
 ## Using
 2 types of component wrapper are provided in the source code of examples :
-- the buttons are flowing in the page : filling horizontal and vertical space, depending on the width of the buttons (using of the css property flex-wrap)
-- the buttons are scrolling horizontally, they can overflow the screen using scrolling. (using the classes scroll-x-wrapper and scroll-x-scroller provided).
+- the buttons are flowing in the page filling horizontal and vertical space : using of the `flex-wrap` css property.
+- the buttons are scrolling horizontally : using `scroll-x-wrapper` and `scroll-x-scroller` classes provided in the example.
 ### Data interface of button
 ```typescript
 export class IButtonData{
