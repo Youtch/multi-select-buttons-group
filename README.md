@@ -8,6 +8,7 @@ Alternatively a horizontal scrolling can also be integrated as a wrapper of the 
 - The data of an instance is contained in an array containing an object. The state toggling of a button will result to change this data (see the examples).
 ### UX good practices
 When you offer an huge number of choices, it is preferable to distribute them inside several component instances: in order to maintain a visual clarity. Eventually you will consider going back to an ion-select component. 
+
 --------------------------------------------------------------------------------------------------------------------------
 ## Using
 2 types of component wrapper are provided in the source code of examples :
@@ -24,6 +25,7 @@ export class IButtonData{
 	checked: boolean; 	//set button state on instance initialization
 }
 ```
+
 --------------------------------------------------------------------------------------------------------------------------
 ## Specifications
 
