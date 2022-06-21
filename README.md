@@ -38,13 +38,13 @@ buttonHeight:*string* = button’s height. All units are accepted.
 
  
 #### 3) Colors and borders
-- buttonForegroundColorChecked:*string = text and icon color of **checked** buttons 
-- buttonBackgroundColorChecked :*string = background color of **checked** buttons
-- buttonForegroundColorUnchecked:*string = text and icon color of **unchecked** buttons
-- buttonBackgroundColorUnchecked :*string = background color of **unchecked** buttons
-- buttonBorderColor:*string = border stroke **color** of buttons
-- buttonBorderSize:*string = border stroke **size** of buttons
-- buttonBorderStyle:*string = border stroke **style** (solid, dashed, etc…)<BR>
+- buttonForegroundColorChecked:*string* = text and icon color of **checked** buttons 
+- buttonBackgroundColorChecked :*string* = background color of **checked** buttons
+- buttonForegroundColorUnchecked:*string* = text and icon color of **unchecked** buttons
+- buttonBackgroundColorUnchecked :*string* = background color of **unchecked** buttons
+- buttonBorderColor:*string* = border stroke **color** of buttons
+- buttonBorderSize:*string* = border stroke **size** of buttons
+- buttonBorderStyle:*string* = border stroke **style** (solid, dashed, etc…)<BR>
 NB : to not apply a border, set ‘buttonBorderColor = none’ (by default) and ‘buttonBorderStyle = none’ (by default)
 
 #### 4)	About color priority order
@@ -55,13 +55,15 @@ Component instance properties (buttonForegroundColorSelected, buttonForegroundCo
 2. **Local using : page’s stylesheet**<BR>
 **Purpose** : To apply the same theme in a page.<BR>
 Edit the page's stylesheet by copying the classes you want to change from src/multi-select-buttons-group/multi-select-buttons-group.scss to your page's sheet. 
-
-3) **Global using : all the app**<BR>
-**Purpose** : to apply an identical theme to all instances of the application. Define theses variables in themes/variables.scss :
-- --msbg-foreground-checked = text and icon color of **checked** buttons
-- --msbg-background-checked = background color of **checked** buttons 
-- --msbg-foreground-unchecked = text and icon color of **unchecked** buttons 
-- --msbg-background-unchecked = background color of **unchecked** buttons
-- --msbg-border-color = border stroke **color** of buttons
-- --msbg-border-size = border stroke **size** of buttons (unit : px)
-- --msbg-border-style = border stroke **style** of buttons (= ‘solid’, ‘dashed’, etc…)
+3. **Global using : all the app**<BR>
+**Purpose** : to apply an identical theme to all instances of the application.<BR>
+Define theses variables in themes/variables.scss :<BR>
+	- --msbg-foreground-checked = text and icon color of **checked** buttons
+	- --msbg-background-checked = background color of **checked** buttons 
+	- --msbg-foreground-unchecked = text and icon color of **unchecked** buttons 
+	- --msbg-background-unchecked = background color of **unchecked** buttons
+	- --msbg-border-color = border stroke **color** of buttons
+	- --msbg-border-size = border stroke **size** of buttons (unit : px)
+	- --msbg-border-style = border stroke **style** of buttons (= ‘solid’, ‘dashed’, etc…)
+	
+Use it as you like :man_cook: !
